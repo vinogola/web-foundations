@@ -1,0 +1,187 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f6f8;
+  color: #222;
+  line-height: 1.5;
+}
+
+header {
+  background-color: #8e0000;
+  color: white;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  text-underline-offset: 4px;
+  transition: color 160ms ease;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible {
+  color: #ffe1d6;
+  text-decoration: underline;
+}
+
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  list-style-type: none;
+  padding: 0;
+}
+
+.features-list li {
+  background-color: #e8f5e9;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+#note-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#note-form label {
+  width: 100%;
+  font-weight: bold;
+}
+
+#note-input,
+.feedback-form input,
+.feedback-form textarea {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+  padding: 10px;
+}
+
+#note-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.feedback-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  display: block;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.feedback-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+button {
+  background-color: #0ba184;
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px 18px;
+  transition: background-color 160ms ease;
+}
+
+button:hover {
+  background-color: #088a70;
+}
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #8e0000;
+  outline-offset: 2px;
+}
+
+#notes-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note {
+  background-color: #fffbe6;
+  border-left: 4px solid #0ba184;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  padding: 12px 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 12px 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+footer {
+  text-align: center;
+  color: #777;
+  padding: 16px;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 18px 16px;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  #note-form {
+    flex-direction: column;
+  }
+}
